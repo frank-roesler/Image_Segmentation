@@ -1,4 +1,3 @@
-import torch.backends.mps
 from nets import AutoEncoder, FCN_Resnet
 from utils import train, load_model, SegDataset
 import torch.optim as optim
@@ -9,7 +8,7 @@ from torch.utils import data
 # The folder structure is assumed to be 'TRAINING_DATA/images' for training images and 'TRAINING_DATA/masks'
 # for the corresponding targets (analogously for validation data).
 
-device_name = 'mps' if torch.backends.mps.is_available() else 'cuda' if torch.cuda.is_available() else 'cpu'
+device_name = 'cuda' if torch.cuda.is_available() else 'cpu'
 device      = torch.device(device_name)
 print('Device: ', device)
 
