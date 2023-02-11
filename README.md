@@ -18,4 +18,12 @@ This code was tested on a subset of the COCO (*Common objects in context*) datas
 ### Results:
 The following images show the results of two different trained models: (1) a simple convolutional autoencoder and (2) a FCN-ResNet model with transfer learning. Clearly, the simple model has learned nontrivial information, but exhibits [texture bias](https://arxiv.org/pdf/1811.12231.pdf). In Contrast, the more sophisticated FCN-ResNet architechture produces more specific, high quality segmentations.
 
+**Autoencoder:**  
+![segmented photo of a cat with autoencoder model](https://github.com/frank-roesler/Image_Segmentation/blob/main/cat_ae9.png)
+![segmented photo of a cat with autoencoder model](https://github.com/frank-roesler/Image_Segmentation/blob/main/cat_ae12.png)
+
+**FCN-ResNet:**  
+![segmented photo of a cat with autoencoder model](https://github.com/frank-roesler/Image_Segmentation/blob/main/cat_resnet9.png)
+![segmented photo of a cat with autoencoder model](https://github.com/frank-roesler/Image_Segmentation/blob/main/cat_resnet12.png)
+
 Any comments or queries are welcome at https://frank-roesler.github.io/contact/
