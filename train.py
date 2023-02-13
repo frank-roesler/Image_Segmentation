@@ -26,8 +26,8 @@ PATH_train = 'TRAINING_DATA'
 PATH_val   = 'VALIDATION_DATA'
 train_data = SegDataset(PATH_train, augment=AugmentData)
 val_data   = SegDataset(PATH_val, augment=AugmentData)
-train_data_loader = data.DataLoader(train_data, batch_size=batch_size)
-val_data_loader   = data.DataLoader(val_data, batch_size=batch_size)
+train_data_loader = data.DataLoader(train_data, batch_size=batch_size, shuffle=True)
+val_data_loader   = data.DataLoader(val_data, batch_size=batch_size, shuffle=True)
 
 model = AutoEncoder(nc=8).to(device)
 # model = FCN_Resnet().to(device)
